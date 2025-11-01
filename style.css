@@ -1,0 +1,311 @@
+/* General Resets & Body Styling */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif; /* Stand-in for Dangwa */
+    color: #000000; /* Black for body text */
+    line-height: 1.6;
+    background-color: #FFFFFF; /* White background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Color Variables */
+:root {
+    --bright-orange: #FF5722;
+    --deep-red: #C21717;
+    --light-gray: #BFBFBF;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', cursive; /* Headlines */
+    color: var(--deep-red);
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 1.8em; }
+
+p {
+    font-family: 'Lato', sans-serif; /* Body text */
+    font-size: 1em;
+    color: var(--black);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary { /* Header Request a Quote button */
+    background-color: var(--bright-orange);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #E64A19; /* Slightly darker orange */
+}
+
+.btn-dark { /* Hero section 'Explore Our Services' */
+    background-color: #0A0F19; /* Dark blue/black from original image background for contrast */
+    color: var(--white);
+    margin-right: 15px;
+}
+
+.btn-dark:hover {
+    background-color: #1A202A;
+}
+
+.btn-light { /* Hero section 'Join Our Academy' */
+    background-color: var(--bright-orange);
+    color: var(--white);
+}
+
+.btn-light:hover {
+    background-color: #E64A19;
+}
+
+/* Header */
+.main-header {
+    background-color: #1A1A1A; /* Dark header background from the image */
+    padding: 15px 0;
+    color: var(--white);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; /* Adjust as needed */
+    vertical-align: Left;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    position: relative;
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--bright-orange);
+}
+
+.main-nav .dropdown .arrow {
+    font-size: 0.7em;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2a2a2a; /* Slightly lighter dark for dropdown */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin-top: 10px; /* Space from parent link */
+}
+
+.dropdown-content a {
+    color: var(--white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bright-orange);
+    color: var(--white);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://via.placeholder.com/1920x600/000000/00FFFF?text=Abstract+Tech+Background') no-repeat center center/cover; /* Placeholder for tech background */
+    color: var(--white);
+    padding: 100px 0;
+    text-align: left;
+    position: relative;
+    overflow: hidden; /* To ensure the background image fits well */
+}
+
+.hero-section::before { /* Semi-transparent overlay for better text readability */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Bring content above overlay */
+    z-index: 1;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 60%; /* Adjust width as needed */
+}
+
+.hero-text h1 {
+    color: var(--deep-red); /* White headline for hero section */
+    font-size: 1.8em;
+    margin-bottom: 0.2em;
+}
+
+.hero-text p {
+    color: #E0E0E0; /* Lighter white for sub-headline */
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    margin-top: 30px;
+}
+
+/* Trusted By Section */
+.trusted-by {
+    padding: 40px 0;
+    text-align: center;
+    background-color: var(--light-gray); /* Light Gray background */
+}
+
+.trusted-text {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #555555; /* Darker grey for this specific text */
+    font-family: 'Lato', sans-serif;
+}
+
+.client-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.client-logos img {
+    height: 30px; /* Adjust logo height */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.client-logos img:hover {
+    opacity: 1;
+}
+
+/* Section Placeholders */
+.section-placeholder {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.white-bg { background-color: var(--white); }
+.light-gray-bg { background-color: var(--light-gray); }
+
+
+/* Footer */
+.main-footer {
+    background-color: #1A1A1A; /* Dark footer background */
+    color: #CCCCCC;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Responsive Design (Basic Example) */
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 3em;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        max-width: 90%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+    .main-nav .btn-primary {
+        margin-top: 20px;
+    }
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn-dark, .btn-light {
+        margin-right: 0;
+        width: 100%;
+    }
+    .client-logos {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2em; }
+    .hero-text p { font-size: 1.1em; }
+    .btn { padding: 10px 20px; }
+}
