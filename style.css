@@ -57,7 +57,7 @@ p {
     color: var(--white);
 }
 
-.btn-primary:hover {
+.btn-primary:active-view-transition {
     background-color: #E64A19; /* Slightly darker orange */
 }
 
@@ -67,7 +67,7 @@ p {
     margin-right: 15px;
 }
 
-.btn-dark:hover {
+.btn-dark:active-view-transition {
     background-color: #1A202A;
 }
 
@@ -76,7 +76,7 @@ p {
     color: var(--white);
 }
 
-.btn-light:hover {
+.btn-light:active {
     background-color: white;
 }
 
