@@ -57,7 +57,7 @@ p {
     color: var(--white);
 }
 
-.btn-primary:active-view-transition {
+.btn-primary:hover {
     background-color: #E64A19; /* Slightly darker orange */
 }
 
@@ -67,7 +67,7 @@ p {
     margin-right: 15px;
 }
 
-.btn-dark:active-view-transition {
+.btn-dark:hover {
     background-color: #1A202A;
 }
 
@@ -76,8 +76,8 @@ p {
     color: var(--white);
 }
 
-.btn-light:active {
-    background-color: white;
+.btn-light:hover {
+    background-color: #E64A19;
 }
 
 /* Header */
@@ -119,7 +119,7 @@ p {
     transition: color 0.3s ease;
 }
 
-.main-nav ul li a:active-view-transition-type,
+.main-nav ul li a:hover,
 .main-nav ul li a.active {
     color: var(--bright-orange);
 }
@@ -150,12 +150,12 @@ p {
     text-align: left;
 }
 
-.dropdown-content a:active {
+.dropdown-content a:hover {
     background-color: var(--bright-orange);
     color: var(--white);
 }
 
-.dropdown:active .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
