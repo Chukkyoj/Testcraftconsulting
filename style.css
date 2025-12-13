@@ -150,12 +150,12 @@ p {
     text-align: left;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:active {
     background-color: var(--bright-orange);
     color: var(--white);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:active .dropdown-content {
     display: block;
 }
 
